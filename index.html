@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find your movie</title>
+    <link rel="stylesheet" href="css/styles.css" />
+   
+  </head>
+  <body>
+    <header>
+      <img src="img/movie.png" width="100" />
+      <h1>Find the movie</h1>
+    </header>
+    <main>
+      <div id="search-box">
+        <input type="text" id="input-text" placeholder="Enter a word..." />
+        <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div id="result" class="hidden"></div>
+
+      <div id="movie-details" class="hidden">
+        <div id="poster"></div>
+
+        <div id="info"></div>
+      </div>
+    </main>
+
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7c4932ccf9.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

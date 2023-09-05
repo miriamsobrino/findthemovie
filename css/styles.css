@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bg-color: #152b44;
+  --white: #ededed;
+  --green: #82bfab;
+  --grey: #616e7d;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--white);
+  line-height: 3rem;
+  margin-bottom: -20px;
+}
+
+#search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-weight: 600;
+}
+
+#input-text {
+  padding: 10px;
+  width: 350px;
+  border-style: none;
+  border-bottom: 2px solid var(--green);
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1rem;
+  outline: none;
+}
+
+#input-text::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+#search-icon {
+  padding: 10px;
+  background-color: var(--green);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#search-icon:hover {
+  transform: scale(1.1);
+}
+
+main {
+  padding: 50px;
+}
+
+#result {
+  margin-top: 30px;
+
+  color: var(--white);
+  background-color: var(--green);
+  padding: 20px;
+  max-width: 450px;
+  max-height: 600px; /* Ajusta el valor según tus necesidades */
+  overflow-y: auto;
+}
+
+.movie {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  border-bottom: 2px solid var(--bg-color);
+  cursor:pointer;
+}
+
+.movie img {
+  margin-bottom: 20px;
+  margin-top: 20px; /* Agrega un margen inferior a la imagen del póster */
+}
+
+.movie h2 {
+  text-align: left;
+  flex: 1;
+}
+
+.movie p {
+  text-align: right;
+  flex: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  overflow-wrap: break-word;
+}
+
+#movie-details {
+  margin-top: 30px;
+  background-color: var(--green);
+  height: auto;
+  max-width: 450px;
+  padding: 20px;
+  gap: 30px;
+  color: var(--white);
+}
+
+.flex-details {
+  display: flex;
+  flex-direction: row; /* Muestra 'year-rated' y 'info' en horizontal */
+  justify-content: space-between; /* Separa 'year-rated' y 'info' con espacio */
+  align-items: center; /* Alinea 'year-rated' en la parte superior */
+}
+
+.flex-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.description-size {
+  font-size: 0.9rem;
+}
+
+#result::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+#result::-webkit-scrollbar-track {
+  background: var(--green); /* color of the tracking area */
+}
+
+#result::-webkit-scrollbar-thumb {
+  background-color: var(--grey); /* color of the scroll thumb */
+}
+
+/* CSS smartphones */
+
+@media only screen and (max-width: 480px) {
+  body {
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+    padding-top: 50px;
+    width: 350px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header img {
+    width: 80px;
+  }
+
+  main {
+    max-width: 450px;
+  }
+
+  #result {
+    height: auto;
+    overflow-x: hidden;
+  }
+  .flex-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movie h2 {
+    font-size: 1.2rem;
+  }
+
+  #movie-details {
+    text-align: center;
+    gap: 25px;
+  }
+}
